@@ -1,0 +1,124 @@
+/* Global color scheme and font settings */
+:root {
+    --primary-color: #222831; /* Dark Blue */
+    --secondary-color: #31363F; /* Light Sage Green */
+    --accent-color: #9DB2BF; /* Light Grey */
+    --background-color: #76ABAE; /* Light Blue */
+    --text-color: #EEEEEE; /* White */ 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+}
+
+/* Styling for each section and their headings */
+#scenarioSection, #objectiveSection, #keyResultsSection {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#scenarioSection h2, #objectiveSection h2, #keyResultsSection h2 {
+    color: var(--text-color);
+}
+
+/* Textarea and button styling */
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: vertical;
+    background-color: #E3E8E0;
+    color: #222831;
+}
+
+button {
+    background-color: var(--text-color);
+    color: #31363F;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* General button hover effect to change opacity */
+button:hover, .help-button:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+/* Styling for all buttons and textareas with a consistent border */
+.validate-button, .help-button, button, textarea {
+    border: 2px solid #76ABAE; /* Adds a border with the specified color */
+}
+
+/* Adjust padding inside buttons to compensate for the border, ensuring text remains centered */
+.validate-button, .help-button, button {
+    padding: 8px 18px; /* Adjust padding as needed */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Maintain consistent design and transition for hover effects on all buttons */
+.validate-button:hover, .help-button:hover, button:hover {
+    opacity: 0.8;
+}
+
+/* Textarea styling adjustment for consistent border and padding */
+textarea {
+    padding: 8px; /* Adjust padding to maintain inner space after border addition */
+    resize: vertical; /* Ensures text area is resizable only vertically */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+
+/* Feedback and modal styling */
+#objectiveFeedback, #keyResultsFeedback {
+    color: var(--accent-color);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    cursor: pointer;
+}
