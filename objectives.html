@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objectives</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Objectives</h1>
+    <div id="objectiveSection">
+        <h2>Objective</h2>
+        <textarea id="objectiveInput" placeholder="Enter your objective"></textarea>
+        <p id="objectiveFeedback"></p>
+        <button onclick="validateObjectiveText()" class="validate-button">Validate Objective</button>
+        <button onclick="showObjectiveHelp()" class="help-button">Need help?</button>
+        <div id="objectiveHelp" style="display:none;">
+            <p><strong>Tip:</strong> An effective objective should be inspirational, actionable, and free of any metrics. For example, "Inspire our team to achieve top customer satisfaction scores."</p>
+        </div>
+    </div>
+</body>
+</html>

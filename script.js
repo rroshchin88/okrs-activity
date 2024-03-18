@@ -122,33 +122,33 @@ function closeModal() {
 // Generates a random scenario from the predefined list
 function generateRandomScenario() {
     var scenarios = [
-    "You are a product manager tasked with launching a new mobile app.",
-    "You are a marketing specialist aiming to increase brand awareness.",
-    "You are a project manager leading a team to deliver a major software upgrade.",
-    "You are a sales manager looking to grow your team's revenue by 20%.",
-    "You are a customer support manager aiming to improve customer satisfaction.",
-    "You are a software engineer working to reduce the number of bugs in your product.",
-    "You are a UX designer aiming to improve the user experience of your product.",
-    "You are a data analyst looking to increase the accuracy of your reports.",
-    "You are a content writer aiming to increase the number of blog subscribers.",
-    "You are a HR manager aiming to improve employee retention.",
-    "You are a finance manager aiming to reduce the company's operating expenses.",
-    "You are a business analyst aiming to improve the company's profit margins.",
-    "You are a supply chain manager aiming to reduce the company's inventory costs.",
-    "You are a customer success manager aiming to increase customer retention.",
-    "You are a graphic designer aiming to improve the visual identity of your product.",
-    "You are a social media manager aiming to increase the company's social media engagement.",
-    "You are a product owner aiming to improve the team's velocity.",
-    "You are a QA engineer aiming to reduce the number of bugs in your product.",
-    "You are a technical writer aiming to improve the quality of your product documentation.",
-    "You are a business development manager aiming to increase the company's market share.",
-    "You are a product marketing manager aiming to increase the number of product trials.",
-    "You are a customer experience manager aiming to improve the customer journey.",
-    "You are a product manager aiming to increase the number of active users of your product.",
-    "You are a sales enablement manager aiming to improve the effectiveness of your sales team.",
-    "You are a product manager aiming to improve the onboarding experience of your product.",
-    "You are a project manager aiming to improve the team's collaboration.",
-    // Add more scenarios as needed
+        "You are a product manager tasked with launching a new mobile app.",
+        "You are a marketing specialist aiming to increase brand awareness.",
+        "You are a project manager leading a team to deliver a major software upgrade.",
+        "You are a sales manager looking to grow your team's revenue by 20%.",
+        "You are a customer support manager aiming to improve customer satisfaction.",
+        "You are a software engineer working to reduce the number of bugs in your product.",
+        "You are a UX designer aiming to improve the user experience of your product.",
+        "You are a data analyst looking to increase the accuracy of your reports.",
+        "You are a content writer aiming to increase the number of blog subscribers.",
+        "You are a HR manager aiming to improve employee retention.",
+        "You are a finance manager aiming to reduce the company's operating expenses.",
+        "You are a business analyst aiming to improve the company's profit margins.",
+        "You are a supply chain manager aiming to reduce the company's inventory costs.",
+        "You are a customer success manager aiming to increase customer retention.",
+        "You are a graphic designer aiming to improve the visual identity of your product.",
+        "You are a social media manager aiming to increase the company's social media engagement.",
+        "You are a product owner aiming to improve the team's velocity.",
+        "You are a QA engineer aiming to reduce the number of bugs in your product.",
+        "You are a technical writer aiming to improve the quality of your product documentation.",
+        "You are a business development manager aiming to increase the company's market share.",
+        "You are a product marketing manager aiming to increase the number of product trials.",
+        "You are a customer experience manager aiming to improve the customer journey.",
+        "You are a product manager aiming to increase the number of active users of your product.",
+        "You are a sales enablement manager aiming to improve the effectiveness of your sales team.",
+        "You are a product manager aiming to improve the onboarding experience of your product.",
+        "You are a project manager aiming to improve the team's collaboration.",
+        // Add more scenarios as needed
     ];
     var randomIndex = Math.floor(Math.random() * scenarios.length);
     document.getElementById('scenario').innerText = scenarios[randomIndex];
@@ -156,3 +156,41 @@ function generateRandomScenario() {
 
 // Adds an event listener to generate the initial scenario when the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', generateRandomScenario);
+
+// Function to load content for OKRs 101
+function loadOkrs101Content() {
+    document.getElementById('contentContainer').innerHTML = `
+        <h1>OKRs 101</h1>
+        <p>This is the content for OKRs 101.</p>
+    `;
+}
+
+// Function to load content for Objectives
+function loadObjectivesContent() {
+    document.getElementById('contentContainer').innerHTML = `
+        <h1>Objectives</h1>
+        <p>This is the content for Objectives.</p>
+    `;
+}
+
+// Function to load content for Key Results
+function loadKeyResultsContent() {
+    document.getElementById('contentContainer').innerHTML = `
+        <h1>Key Results</h1>
+        <p>This is the content for Key Results.</p>
+    `;
+}
+
+// Function to load content for Write Your Own OKRs
+function loadWriteOkrsContent() {
+    document.getElementById('contentContainer').innerHTML = `
+        <h1>Write Your Own OKRs</h1>
+        <p>This is the content for Write Your Own OKRs.</p>
+    `;
+}
+
+// Add event listeners to the navigation menu items
+document.getElementById('okrs101').addEventListener('click', loadOkrs101Content);
+document.getElementById('objectives').addEventListener('click', loadObjectivesContent);
+document.getElementById('keyResults').addEventListener('click', loadKeyResultsContent);
+document.getElementById('writeOkrs').addEventListener('click', loadWriteOkrsContent);

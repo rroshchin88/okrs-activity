@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Key Results</h1>
+    <div id="keyResultsSection">
+        <h2>Key Results</h2>
+        <textarea id="keyResultsInput" placeholder="Enter your key results"></textarea>
+        <p id="keyResultsFeedback"></p>
+        <button onclick="validateKeyResults()" class="validate-button">Validate Key Results</button>
+        <button onclick="showKeyResultsHelp()" class="help-button">Need help?</button>
+        <div id="keyResultsHelp" style="display:none;">
+            <p><strong>Tip:</strong> Effective key results should be measurable and time-bound. For example, "Increase customer satisfaction from 70% to 90% by the end of Q4."</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -7,46 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>OKRs Exercise</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" id="okrs101">OKRs 101</a></li>
+                <li><a href="#" id="objectives">Objectives</a></li>
+                <li><a href="#" id="keyResults">Key Results</a></li>
+                <li><a href="#" id="writeOkrs">Write Your Own OKRs</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Scenario Section: Users can generate and view random scenarios -->
-    <div id="scenarioSection">
-        <h2>Scenario</h2>
-        <p id="scenario"></p>
-        <button onclick="generateRandomScenario()">Generate Random Scenario</button>
-    </div>
-
-    <!-- Objective Section: Users input and validate their objective -->
-    <div id="objectiveSection">
-        <h2>Objective</h2>
-        <textarea id="objectiveInput" placeholder="Enter your objective"></textarea>
-        <p id="objectiveFeedback"></p>
-        <button onclick="validateObjectiveText()" class="validate-button">Validate Objective</button>
-        <button onclick="showObjectiveHelp()" class="help-button">Need help?</button>
-        <div id="objectiveHelp" style="display:none;">
-            <p><strong>Tip:</strong> An effective objective should be inspirational, actionable, and free of any metrics. For example, "Inspire our team to achieve top customer satisfaction scores."</p>
-        </div>
-    </div>
-    
-    <!-- Key Results Section: Users input and validate their key results -->
-    <div id="keyResultsSection">
-        <h2>Key Results</h2>
-        <textarea id="keyResultsInput" placeholder="Enter your key results"></textarea>
-        <p id="keyResultsFeedback"></p>
-        <button onclick="validateKeyResults()" class="validate-button">Validate Key Results</button>
-        <button onclick="showKeyResultsHelp()" class="help-button">Need help?</button>
-        <div id="keyResultsHelp" style="display:none;">
-            <p><strong>Tip:</strong> Effective key results should be measurable and time-bound. For example, "Increase customer satisfaction from 70% to 90% by the end of Q4."</p>
-        </div>
-    </div>
-
-    <!-- Modal Structure: Provides feedback upon successful validation -->
-    <div id="successModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2>Congratulations!</h2>
-            <p>Your OKRs look great!</p>
-        </div>
+    <div id="contentContainer">
+        <!-- Content will be dynamically loaded here -->
     </div>
 
     <script src="script.js"></script>

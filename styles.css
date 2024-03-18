@@ -1,12 +1,13 @@
 /* Global color scheme and font settings */
 :root {
-    --primary-color: #222831; /* Dark Blue */
-    --secondary-color: #31363F; /* Light Sage Green */
-    --accent-color: #9DB2BF; /* Light Grey */
-    --background-color: #76ABAE; /* Light Blue */
-    --text-color: #EEEEEE; /* White */ 
+    --primary-color: #428bca; /* Dark Blue */
+    --secondary-color: #5cb85c; /* Light Green */
+    --accent-color: #5bc0de; /* Light Blue */
+    --background-color: #dff0d8; /* Soft Green */
+    --text-color: #333333; /* Dark Gray */ 
 }
 
+/* Body styles */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
@@ -16,9 +17,68 @@ body {
     padding: 20px;
 }
 
+/* Heading styles */
 h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     color: var(--primary-color);
+}
+
+/* Styling for navigation menu */
+header {
+    padding: 10px 20px;
+}
+
+/* Navigation menu styles */
+nav {
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    display: flex; /* Display items horizontally */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--accent-color); /* Light border */
+    font-weight: 600; /* Semi-bold font weight */
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Horizontal divider */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc; /* Light gray */
+    margin: 20px 0;
+}
+
+/* Card styling for menu items */
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #ffffff; /* White */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #f5f5f5; /* Lighter gray */
 }
 
 /* Styling for each section and their headings */
@@ -46,13 +106,13 @@ textarea {
     box-sizing: border-box;
     font-size: 14px;
     resize: vertical;
-    background-color: #E3E8E0;
-    color: #222831;
+    background-color: #ffffff; /* White */
+    color: var(--text-color);
 }
 
 button {
-    background-color: var(--text-color);
-    color: #31363F;
+    background-color: var(--primary-color);
+    color: white;
     padding: 10px 20px;
     margin: 10px 0;
     border: none;
@@ -69,7 +129,7 @@ button:hover, .help-button:hover {
 
 /* Styling for all buttons and textareas with a consistent border */
 .validate-button, .help-button, button, textarea {
-    border: 2px solid #76ABAE; /* Adds a border with the specified color */
+    border: 2px solid var(--primary-color);
 }
 
 /* Adjust padding inside buttons to compensate for the border, ensuring text remains centered */
@@ -89,7 +149,6 @@ textarea {
     resize: vertical; /* Ensures text area is resizable only vertically */
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
-
 
 /* Feedback and modal styling */
 #objectiveFeedback, #keyResultsFeedback {
