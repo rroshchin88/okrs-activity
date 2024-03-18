@@ -5,23 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OKRs Exercise</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
+<body onload="showHome()">
     <header>
+        <h1>OKRs Exercise</h1>
         <nav>
             <ul>
-                <li><a href="#" id="okrs101">OKRs 101</a></li>
-                <li><a href="#" id="objectives">Objectives</a></li>
-                <li><a href="#" id="keyResults">Key Results</a></li>
-                <li><a href="#" id="writeOkrs">Write Your Own OKRs</a></li>
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showOKRs101()">OKRs 101</a></li>
+                <li><a href="#" onclick="showObjectives()">Objectives</a></li>
+                <li><a href="#" onclick="showKeyResults()">Key Results</a></li>                
+                <li><a href="#" onclick="showWriteYourOwnOKRs()">Write your own OKRs</a></li>
             </ul>
         </nav>
+        <hr>
     </header>
 
-    <div id="contentContainer">
-        <!-- Content will be dynamically loaded here -->
+    <!-- Placeholder content for Home page -->
+    <div id="homePage">
+        <h1>Welcome to OKRs Exercise</h1>
+        <p>This is the Home page. Placeholder content can be added here.</p>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Placeholder content for OKRs 101 section -->
+    <div id="okrs101Page" style="display: none;">
+        <h1>OKRs 101</h1>
+        <p>This is the content for OKRs 101. Placeholder content can be added here.</p>
+    </div>
+
+    <!-- Placeholder content for Objectives section -->
+    <div id="objectivesPage" style="display: none;">
+        <div id="objectiveSection">
+            <h2>Objective</h2>
+            <textarea id="objectiveInput" placeholder="Enter your objective"></textarea>
+            <p id="objectiveFeedback"></p>
+            <button onclick="validateObjectiveText()" class="validate-button">Validate Objective</button>
+            <button onclick="showObjectiveHelp()" class="help-button">Need help?</button>
+            <div id="objectiveHelp" style="display:none;">
+                <p><strong>Tip:</strong> An effective objective should be inspirational, actionable, and free of any metrics. For example, "Inspire our team to achieve top customer satisfaction scores."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Placeholder content for Key Results section -->
+    <div id="keyResultsPage" style="display: none;">
+        <div id="keyResultsSection">
+            <h2>Key Results</h2>
+            <textarea id="keyResultsInput" placeholder="Enter your key results"></textarea>
+            <p id="keyResultsFeedback"></p>
+            <button onclick="validateKeyResults()" class="validate-button">Validate Key Results</button>
+            <button onclick="showKeyResultsHelp()" class="help-button">Need help?</button>
+            <div id="keyResultsHelp" style="display:none;">
+                <p><strong>Tip:</strong> Effective key results should be measurable and time-bound. For example, "Increase customer satisfaction from 70% to 90% by the end of Q4."</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Placeholder content for Write Your Own OKRs section -->
+    <div id="writeYourOwnOKRsPage" style="display: none;">
+        <h1>Write Your Own OKRs</h1>
+        <p>This is the content for Write Your Own OKRs. Placeholder content can be added here.</p>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>Your OKRs look great!</p>
+        </div>
+    </div>
+
 </body>
 </html>

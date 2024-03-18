@@ -157,40 +157,47 @@ function generateRandomScenario() {
 // Adds an event listener to generate the initial scenario when the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', generateRandomScenario);
 
-// Function to load content for OKRs 101
-function loadOkrs101Content() {
-    document.getElementById('contentContainer').innerHTML = `
-        <h1>OKRs 101</h1>
-        <p>This is the content for OKRs 101.</p>
-    `;
+// Function to show the Home page
+function showHome() {
+    document.getElementById('homePage').style.display = 'block';
+    document.getElementById('okrs101Page').style.display = 'none';
+    document.getElementById('objectivesPage').style.display = 'none';
+    document.getElementById('keyResultsPage').style.display = 'none';
+    document.getElementById('writeYourOwnOKRsPage').style.display = 'none';
 }
 
-// Function to load content for Objectives
-function loadObjectivesContent() {
-    document.getElementById('contentContainer').innerHTML = `
-        <h1>Objectives</h1>
-        <p>This is the content for Objectives.</p>
-    `;
+// Function to show the OKRs 101 section
+function showOKRs101() {
+    document.getElementById('homePage').style.display = 'none';
+    document.getElementById('okrs101Page').style.display = 'block';
+    document.getElementById('objectivesPage').style.display = 'none';
+    document.getElementById('keyResultsPage').style.display = 'none';
+    document.getElementById('writeYourOwnOKRsPage').style.display = 'none';
 }
 
-// Function to load content for Key Results
-function loadKeyResultsContent() {
-    document.getElementById('contentContainer').innerHTML = `
-        <h1>Key Results</h1>
-        <p>This is the content for Key Results.</p>
-    `;
+// Function to show the Write Your Own OKRs section
+function showWriteYourOwnOKRs() {
+    document.getElementById('homePage').style.display = 'none';
+    document.getElementById('okrs101Page').style.display = 'none';
+    document.getElementById('objectivesPage').style.display = 'none';
+    document.getElementById('keyResultsPage').style.display = 'none';
+    document.getElementById('writeYourOwnOKRsPage').style.display = 'block';
 }
 
-// Function to load content for Write Your Own OKRs
-function loadWriteOkrsContent() {
-    document.getElementById('contentContainer').innerHTML = `
-        <h1>Write Your Own OKRs</h1>
-        <p>This is the content for Write Your Own OKRs.</p>
-    `;
+// Function to show the objectives page
+function showObjectives() {
+    document.getElementById('homePage').style.display = 'none';
+    document.getElementById('okrs101Page').style.display = 'none';
+    document.getElementById('objectivesPage').style.display = 'block';
+    document.getElementById('keyResultsPage').style.display = 'none';
+    document.getElementById('writeYourOwnOKRsPage').style.display = 'none';
 }
 
-// Add event listeners to the navigation menu items
-document.getElementById('okrs101').addEventListener('click', loadOkrs101Content);
-document.getElementById('objectives').addEventListener('click', loadObjectivesContent);
-document.getElementById('keyResults').addEventListener('click', loadKeyResultsContent);
-document.getElementById('writeOkrs').addEventListener('click', loadWriteOkrsContent);
+// Function to show the key results page
+function showKeyResults() {
+    document.getElementById('homePage').style.display = 'none';
+    document.getElementById('okrs101Page').style.display = 'none';
+    document.getElementById('objectivesPage').style.display = 'none';
+    document.getElementById('keyResultsPage').style.display = 'block';
+    document.getElementById('writeYourOwnOKRsPage').style.display = 'none';
+}
